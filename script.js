@@ -90,170 +90,133 @@ const countdown = setInterval(() => {
   }
 }, 1000);
 
-// Particles JS
+// Particle JS init
 particlesJS("particles-js", {
   "particles": {
-    "number": {
-      "value": 15,
-      "density": {
-        "enable": false,
-        "value_area": 639.7441023590567
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "image",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "./assets/batblack.png",
-        "width": 63,
-        "height": 42
-      }
-    },
-    "opacity": {
-      "value": 0.13594562175129954,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1.2149388885739052,
-        "opacity_min": 0.12149388885739051,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 39.98400639744104,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 97.1951110859124,
-        "size_min": 26.728655548625913,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": false,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.575769692123151,
-      "width": 1.2794882047181133
-    },
-    "move": {
-      "enable": true,
-      "speed": 1.7,
-      "direction": "bottom",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
+    "number": { "value": 15 },
+    "color": { "value": "#ffffff" },
+    "shape": { "type": "image", "image": { "src": "./assets/batblack.png", "width": 63, "height": 42 } },
+    "opacity": { "value": 0.15 },
+    "size": { "value": 40, "random": true },
+    "line_linked": { "enable": false },
+    "move": { "enable": true, "speed": 1.7, "direction": "bottom", "random": true, "straight": false, "out_mode": "out" }
   },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": false,
-        "mode": "bubble"
-      },
-      "onclick": {
-        "enable": false,
-        "mode": "repulse"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
+  "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false }, "onclick": { "enable": false } } },
   "retina_detect": true
 }, function() {
-    const allParticles = window.pJSDom[0].pJS.particles.array;
-    allParticles.forEach(p => {
-        const edge = Math.floor(Math.random() * 4);
-        switch(edge){
-            case 0: p.x = Math.random() * pJS.canvas.w; p.y = 0; break; 
-            case 1: p.x = Math.random() * pJS.canvas.w; p.y = pJS.canvas.h; break; 
-            case 2: p.x = 0; p.y = Math.random() * pJS.canvas.h; break;  
-            case 3: p.x = pJS.canvas.w; p.y = Math.random() * pJS.canvas.h; break; 
-        }
-    });
+  const allParticles = window.pJSDom[0].pJS.particles.array;
+  allParticles.forEach(p => {
+    const edge = Math.floor(Math.random() * 4);
+    switch(edge){
+      case 0: p.x = Math.random() * pJS.canvas.w; p.y = 0; break;
+      case 1: p.x = Math.random() * pJS.canvas.w; p.y = pJS.canvas.h; break;
+      case 2: p.x = 0; p.y = Math.random() * pJS.canvas.h; break;
+      case 3: p.x = pJS.canvas.w; p.y = Math.random() * pJS.canvas.h; break;
+    }
+  });
 });
+
+
+
+const countdownTitle = document.querySelector(".countdown-title");
 
 const themes = [
   { 
     bgGradient:"linear-gradient(-45deg, #000000, #1a0000, #330000, #000000)",
-    primary:"#d63384", secondary:"#ff80ff", border:"#d63384", boxShadow:"rgba(214,51,132,0.5)", 
+    primary:"#ff0000", secondary:"#ff8080", border:"#ff0000", boxShadow:"rgba(255,0,0,0.5)", 
     questionBtn:"#8B0000", questionBorder:"#8B0000", finalText:"#ff0000", 
-    particleColor:{r:255,g:0,b:0}, fogOpacity:0.3 
+    particleColor:{r:255,g:0,b:0}, fogOpacity:0.3, heart:"❤️"
   },
   { 
-    bgGradient:"linear-gradient(-45deg, #0a001a, #1a0033, #0a001a, #1a0000)",
-    primary:"#a020f0", secondary:"#e0a0ff", border:"#a020f0", boxShadow:"rgba(160,32,240,0.5)", 
-    questionBtn:"#4B0082", questionBorder:"#4B0082", finalText:"#d020f0", 
-    particleColor:{r:160,g:32,b:240}, fogOpacity:0.3
+    bgGradient:"linear-gradient(-45deg, #331a00, #663300, #331a00, #000000)",
+    primary:"#ff8c00", secondary:"#ffc080", border:"#ff8c00", boxShadow:"rgba(255,140,0,0.5)", 
+    questionBtn:"#b35900", questionBorder:"#b35900", finalText:"#ff8c00", 
+    particleColor:{r:255,g:140,b:0}, fogOpacity:0.3, heart:"🧡"
+  },
+  { 
+    bgGradient:"linear-gradient(-45deg, #333300, #666600, #333300, #000000)",
+    primary:"#ffd700", secondary:"#fff480", border:"#ffd700", boxShadow:"rgba(255,215,0,0.5)", 
+    questionBtn:"#b5a200", questionBorder:"#b5a200", finalText:"#ffd700", 
+    particleColor:{r:255,g:215,b:0}, fogOpacity:0.3, heart:"💛"
   },
   { 
     bgGradient:"linear-gradient(-45deg, #001a00, #003300, #001a00, #000000)",
-    primary:"#00ffff", secondary:"#80ffff", border:"#00ffff", boxShadow:"rgba(0,255,255,0.5)", 
-    questionBtn:"#008b8b", questionBorder:"#008b8b", finalText:"#00ffff", 
-    particleColor:{r:0,g:255,b:255}, fogOpacity:0.3
+    primary:"#00ff00", secondary:"#80ff80", border:"#00ff00", boxShadow:"rgba(0,255,0,0.5)", 
+    questionBtn:"#008000", questionBorder:"#008000", finalText:"#00ff00", 
+    particleColor:{r:0,g:255,b:0}, fogOpacity:0.3, heart:"💚"
+  },
+  { 
+    bgGradient:"linear-gradient(-45deg, #00001a, #000033, #00001a, #000000)",
+    primary:"#00bfff", secondary:"#80d4ff", border:"#00bfff", boxShadow:"rgba(0,191,255,0.5)", 
+    questionBtn:"#005f8b", questionBorder:"#005f8b", finalText:"#00bfff", 
+    particleColor:{r:0,g:191,b:255}, fogOpacity:0.3, heart:"💙"
+  },
+  { 
+    bgGradient:"linear-gradient(-45deg, #1a001a, #330033, #1a001a, #000000)",
+    primary:"#800080", secondary:"#d291ff", border:"#800080", boxShadow:"rgba(128,0,128,0.5)", 
+    questionBtn:"#4B0082", questionBorder:"#4B0082", finalText:"#800080", 
+    particleColor:{r:128,g:0,b:128}, fogOpacity:0.3, heart:"💜"
+  },
+  { 
+    bgGradient:"linear-gradient(-45deg, #1a1a1a, #333333, #1a1a1a, #000000)",
+    primary:"#000000", secondary:"#666666", border:"#000000", boxShadow:"rgba(0,0,0,0.5)", 
+    questionBtn:"#333333", questionBorder:"#333333", finalText:"#000000", 
+    particleColor:{r:0,g:0,b:0}, fogOpacity:0.3, heart:"🖤"
+  },
+  { 
+    bgGradient:"linear-gradient(-45deg, #4d2b1a, #8b5a33, #4d2b1a, #2a140d)",
+    primary:"#a52a2a", secondary:"#d99191", border:"#a52a2a", boxShadow:"rgba(165,42,42,0.5)", 
+    questionBtn:"#6e1d1d", questionBorder:"#6e1d1d", finalText:"#a52a2a", 
+    particleColor:{r:165,g:42,b:42}, fogOpacity:0.3, heart:"🤎"
+  },
+  { 
+    bgGradient:"linear-gradient(-45deg, #ff99cc, #ffb3d9, #ff99cc, #ff80c0)",
+    primary:"#ff69b4", secondary:"#ffb3d9", border:"#ff69b4", boxShadow:"rgba(255,105,180,0.5)", 
+    questionBtn:"#ff4d94", questionBorder:"#ff4d94", finalText:"#ff1493", 
+    particleColor:{r:255,g:20,b:147}, fogOpacity:0.3, heart:"💖"
   }
 ];
 
-let currentTheme = 0;   
+let currentTheme = 0;
 
 colorBtn.addEventListener("click", () => {
     currentTheme = (currentTheme + 1) % themes.length;
     const theme = themes[currentTheme];
 
-
+    // Background gradient
     document.body.style.background = theme.bgGradient;
+    document.body.style.backgroundSize = "400% 400%";
+    document.body.style.animation = "gradientShift 5s ease infinite";
 
+    // Countdown title with heart emoji
+    countdownTitle.style.color = theme.primary;
+    countdownTitle.innerHTML = `Time Left Until My Baddie’s Birthday ${theme.heart}`;
 
-    document.querySelector(".countdown-title").style.color = theme.primary;
+    // Countdown boxes
     document.querySelectorAll(".time-box").forEach(box => {
         box.style.border = `2px solid ${theme.border}`;
         box.style.boxShadow = `0px 0px 15px ${theme.boxShadow}`;
     });
     document.querySelectorAll(".time-box span").forEach(span => { span.style.color = theme.secondary; });
 
+    // Question box
     document.querySelectorAll("#questionBox button").forEach(btn => { btn.style.backgroundColor = theme.questionBtn; });
     document.getElementById("questionBox").style.border = `2px solid ${theme.questionBorder}`;
 
+    // Final message styling with theme and heart
     finalMessage.style.color = theme.finalText;
-    
+    finalMessage.innerHTML = `Eternally bound in darkness with you ${theme.heart}`;
+    finalMessage.style.setProperty('--pulse-color', theme.finalText);
+
+    // Fog opacity
+    document.querySelector(".fog").style.opacity = theme.fogOpacity;
+
+    // Particle color update
+    const particlesInstance = window.pJSDom[0].pJS;
+    particlesInstance.particles.array.forEach(p => {
+        p.color.r = theme.particleColor.r;
+        p.color.g = theme.particleColor.g;
+        p.color.b = theme.particleColor.b;
+    });
+    particlesInstance.fn.particlesDraw();
 });
