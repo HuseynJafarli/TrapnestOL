@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'MedievalSharp', cursive;
-    background: linear-gradient(-45deg, #000000, #1a0000, #330000, #000000);
+    background: linear-gradient(-45deg, #0f0f0f, #2d0000, #480101, #141414);
     background-size: 400% 400%;
     animation: gradientShift 5s ease infinite;
     color: #fff;
@@ -46,7 +46,6 @@ body {
 
 .center-logo img:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 2px #8B0000);
 }
 
 #questionBox {

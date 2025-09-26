@@ -134,12 +134,6 @@ const themes = [
     particleColor:{r:255,g:140,b:0}, fogOpacity:0.3, heart:"🧡"
   },
   { 
-    bgGradient:"linear-gradient(-45deg, #333300, #666600, #333300, #000000)",
-    primary:"#ffd700", secondary:"#fff480", border:"#ffd700", boxShadow:"rgba(255,215,0,0.5)", 
-    questionBtn:"#b5a200", questionBorder:"#b5a200", finalText:"#ffd700", 
-    particleColor:{r:255,g:215,b:0}, fogOpacity:0.3, heart:"💛"
-  },
-  { 
     bgGradient:"linear-gradient(-45deg, #001a00, #003300, #001a00, #000000)",
     primary:"#00ff00", secondary:"#80ff80", border:"#00ff00", boxShadow:"rgba(0,255,0,0.5)", 
     questionBtn:"#008000", questionBorder:"#008000", finalText:"#00ff00", 
@@ -156,12 +150,6 @@ const themes = [
     primary:"#800080", secondary:"#d291ff", border:"#800080", boxShadow:"rgba(128,0,128,0.5)", 
     questionBtn:"#4B0082", questionBorder:"#4B0082", finalText:"#800080", 
     particleColor:{r:128,g:0,b:128}, fogOpacity:0.3, heart:"💜"
-  },
-  { 
-    bgGradient:"linear-gradient(-45deg, #1a1a1a, #333333, #1a1a1a, #000000)",
-    primary:"#000000", secondary:"#666666", border:"#000000", boxShadow:"rgba(0,0,0,0.5)", 
-    questionBtn:"#333333", questionBorder:"#333333", finalText:"#000000", 
-    particleColor:{r:0,g:0,b:0}, fogOpacity:0.3, heart:"🖤"
   },
   { 
     bgGradient:"linear-gradient(-45deg, #4d2b1a, #8b5a33, #4d2b1a, #2a140d)",
